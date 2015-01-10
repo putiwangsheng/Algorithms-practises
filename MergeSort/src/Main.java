@@ -21,5 +21,10 @@ public class Main {
         Array sort2 = new Array(originArray);
         sort2.mergeSort(originArray,0,7,mergeWay2);
         sort2.showArray();
+        System.out.println();
+
+        Array sort3 = new Array(originArray);
+        sort3.mergeSortChange(originArray,0,7);
+        sort3.showArray();
     }
 }

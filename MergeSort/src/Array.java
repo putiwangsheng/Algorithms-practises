@@ -3,15 +3,14 @@
  */
 
 public class Array {
-    int[] array;
-    int first;
-    int last = array.length - 1;
+    private int [] array;
+    private int first;
+    private int last;
     private int times = 0;
 
-    public Array() {
-    }
-
     Array(int[] array){
+        int first = 0;
+        int last = array.length - 1;
         this.array = array;
     }
 
@@ -96,4 +95,32 @@ public class Array {
             }
         }
     }
+
+    public void mergeSortChange(int[] array,int first,int last){
+        if(first < last - 2) {
+            int middle = (first + last) / 2;
+
+            mergeSortChange(array, first,middle);
+            mergeSortChange(array,middle + 1,last);
+            insertionSort(array,first,middle);
+            insertionSort(array,middle + 1,last);
+
+            mergeHaveSentinel(array,first,middle,last);
+        }
+    }
+
+    public void insertionSort(int[] array,int first,int last){
+        for(int i = first + 1;i < last;i++){
+            int key = array[i];
+            if(key > array[i - 1]){
+                key = array[i];
+            }
+            else if(key < array[i - 1]){
+                array[i - 1] = key;
+                array[i] = array[i -1];
+                key = array[i + 1];
+            }
+        }
+    }
+
 }
