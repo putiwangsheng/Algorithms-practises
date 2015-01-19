@@ -11,6 +11,7 @@ public class Main {
             System.out.print(originArray[i] + " ");
         }
         System.out.println();
+        System.out.println("归并排序结果为：");
 
         Array sort1 = new Array(originArray);
         sort1.mergeSort(originArray,0,7,mergeWay1);

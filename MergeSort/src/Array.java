@@ -5,7 +5,6 @@ public class Array {
     private int[] array;
     private int first;
     private int last;
-    private int times = 0;
 
     Array(int[] array){
         first = 0;
@@ -40,8 +39,6 @@ public class Array {
         int[] array2 = new int[last - middle + 1];
         array1[array1.length - 1] = Integer.MAX_VALUE;
         array2[array2.length - 1] = Integer.MAX_VALUE;
-        times += 4;
-
 
         for(int i = 0;i < array1.length - 1;i++){
             array1[i] = array[first + i];
