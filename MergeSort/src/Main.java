@@ -1,14 +1,13 @@
 /**
- * Created by Administrator on 2015/1/8.
+ * Created by Administrator on 2015/1/16.
  */
-
 public class Main {
     public static void main(String[] args){
         int originArray[] = new int[]{3,41,52,26,38,57,9,49};
         int mergeWay1 = 1;
         int mergeWay2 = 2;
 
-       for(int i = 0;i < originArray.length;i++){
+        for(int i = 0;i < originArray.length;i++){
             System.out.print(originArray[i] + " ");
         }
         System.out.println();
