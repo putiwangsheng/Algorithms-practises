@@ -12,12 +12,21 @@ public class TheMaxSubArray {
         high = array.length - 1;
     }
 
-    public void showMaxSumSubArray(){
-        MaxSum maxsum = findMaxSumSubArray(array,low,high);
-        System.out.print("最大子数组为：");
-        for(int i = maxsum.getLow();i <= maxsum.getHigh();i++){
-            System.out.print(array[i] + " ");
+    public void showMaxSumSubArray(int way){
+        MaxSum maxsum1 = findMaxSumSubArray(array,low,high);
+        MaxSum maxsum2 = maximumSumArrayViolent();
+
+        if(way == 1) {
+            for (int i = maxsum1.getLow(); i <= maxsum1.getHigh(); i++) {
+                System.out.print(array[i] + " ");
+            }
         }
+        else if(way == 2){
+            for (int i = maxsum2.getLow(); i <= maxsum2.getHigh(); i++) {
+                System.out.print(array[i] + " ");
+            }
+        }
+
     }
 
     //递归
@@ -96,4 +105,41 @@ public class TheMaxSubArray {
 
         return crossingMaxSubArray;
     }
+
+    //暴力求解
+    public MaxSum maximumSumArrayViolent(){
+        MaxSum maxSumSubArray = new MaxSum();
+        MaxSum[][] sumSumArray = new MaxSum[array.length][array.length];
+
+        for(int i = 0;i < array.length;i++){
+            for(int j = 0; j < array.length;j++){
+                sumSumArray[i][j] = new MaxSum(i,j,0);
+            }
+        }
+
+        for(int i = 0;i < array.length;i++){
+            for(int j = i;j < array.length;j++){
+                if(j > i) {
+                    int thelow = i;
+                    int thehigh = j;
+                    int thesum = sumSumArray[i][j - 1].getMaxSum() + array[j];
+                    sumSumArray[i][j] = new MaxSum(thelow, thehigh, thesum);
+                }
+                else{
+                    sumSumArray[i][j] = new MaxSum(i,j,array[j]);
+                }
+            }
+        }
+
+        for(int i = 0;i < array.length;i++){
+            for(int j = 0;j < array.length;j++){
+                if(sumSumArray[i][j].getMaxSum() > maxSumSubArray.getMaxSum()){
+                    maxSumSubArray = sumSumArray[i][j];
+                }
+            }
+        }
+
+        return maxSumSubArray;
+    }
+
 }
