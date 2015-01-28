@@ -7,6 +7,7 @@ public class Main {
 
         int way1 = 1;
         int way2 = 2;
+        int way3 = 3;
 
         System.out.print("递归法，最大子数组为：");
         TheMaxSubArray maxSubArray1 = new TheMaxSubArray(array);
@@ -16,5 +17,10 @@ public class Main {
         System.out.print("暴力法，最大子数组为：");
         TheMaxSubArray maxSubArray2 = new TheMaxSubArray(array);
         maxSubArray2.showMaxSumSubArray(way2);
+        System.out.println();
+
+        System.out.print("第三种方法，最大子数组为：");
+        TheMaxSubArray maxSubArray3 = new TheMaxSubArray(array);
+        maxSubArray3.showMaxSumSubArray(way3);
     }
 }
