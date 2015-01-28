@@ -148,6 +148,7 @@ public class TheMaxSubArray {
         return subArraySubArray;
     }
 
+    //方法3
     public SubArray theThirdWayOfSubArray(){
         SubArray maxSumSubArray = new SubArray();
         SubArray maxSumSubArrayJ = new SubArray();
