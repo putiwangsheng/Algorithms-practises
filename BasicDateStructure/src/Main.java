@@ -5,7 +5,9 @@ import java.util.Random;
  */
 public class Main {
     public static void main(String[] args){
-        queue();
+        //queue();
+        //binTree();
+        normalTree();
     }
 
     public static void queue(){
@@ -22,5 +24,21 @@ public class Main {
             int number = q.deQueue();
             System.out.print(number + " ");
         }
+    }
+
+    public static void binTree(){
+        final int NULL = Integer.MAX_VALUE;
+        int[] binTreeArray = {8,2,4,NULL,NULL,1,NULL,NULL,5,3,NULL,7,NULL,NULL,NULL};
+
+        BinTree binTreeTest = new BinTree(binTreeArray);
+        binTreeTest.showBinTree();
+    }
+
+    public static void normalTree(){
+        final int NULL = Integer.MAX_VALUE;
+        int[] normalTreeArray = {0,1,5,NULL,6,NULL,7,NULL,NULL,2,NULL,3,NULL,4,NULL,NULL};
+
+        NormalTree normalTreeTest = new NormalTree(normalTreeArray);
+        normalTreeTest.showNormalTree();
     }
 }
