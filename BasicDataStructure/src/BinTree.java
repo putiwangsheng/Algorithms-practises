@@ -1,7 +1,5 @@
-import sun.reflect.generics.tree.Tree;
-
 /**
- * Created by Administrator on 2015/1/30.
+ * Created by Administrator on 2015/2/22.
  */
 public class BinTree {
     int index = 0;

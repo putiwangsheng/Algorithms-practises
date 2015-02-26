@@ -1,7 +1,5 @@
-import sun.reflect.generics.tree.Tree;
-
 /**
- * Created by Administrator on 2015/2/4.
+ * Created by Administrator on 2015/2/22.
  */
 public class NormalTree {
     int index = 0;

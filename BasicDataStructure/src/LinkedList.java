@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2015/2/5.
+ * Created by Administrator on 2015/2/22.
  */
 public class LinkedList {
     private Node head = null;
@@ -144,4 +144,3 @@ public class LinkedList {
         }
     }
 }
-

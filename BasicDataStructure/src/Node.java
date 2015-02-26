@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2015/2/5.
+ * Created by Administrator on 2015/2/22.
  */
 public class Node {
     private int data = 0;

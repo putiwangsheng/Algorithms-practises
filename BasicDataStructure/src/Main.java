@@ -1,8 +1,6 @@
-import java.util.Random;
-import java.util.Scanner;
-
+import java.util.*;
 /**
- * Created by Administrator on 2015/1/29.
+ * Created by Administrator on 2015/2/22.
  */
 public class Main {
     public static void main(String[] args){

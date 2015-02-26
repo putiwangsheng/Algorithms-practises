@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2015/1/29.
+ * Created by Administrator on 2015/2/22.
  */
 public class Queue {
     private int[] queuearray;
@@ -26,7 +26,7 @@ public class Queue {
             return;        //如果没有return在deQueue时tail初始值会为1，影响判断是否队列是否为空
         }
         else if(isEmpty){
-           isEmpty = false;
+            isEmpty = false;
         }
 
         queuearray[tail] = data;
