@@ -106,15 +106,13 @@ public class Array {
     }
 
     public void insertionSort(int[] array,int first,int last) {
-        for (int i = first + 1; i < last; i++) {
+        for(int i = first + 1; i < last;i++){
             int key = array[i];
-            if (key > array[i - 1]) {
-                key = array[i];
-            } else if (key < array[i - 1]) {
-                array[i - 1] = key;
+            while(i - 1 > 0 && key < array[i - 1]){
                 array[i] = array[i - 1];
-                key = array[i + 1];
+                i--;
             }
+            array[i] = key;
         }
     }
 }

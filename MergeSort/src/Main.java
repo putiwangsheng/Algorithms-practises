@@ -13,15 +13,15 @@ public class Main {
         System.out.println();
         System.out.println("归并排序结果为：");
 
-        Array sort1 = new Array(originArray);
-        sort1.mergeSort(originArray,0,7,mergeWay1);
-        sort1.showArray();
-        System.out.println();
+//        Array sort1 = new Array(originArray);
+//        sort1.mergeSort(originArray,0,7,mergeWay1);
+//        sort1.showArray();
+//        System.out.println();
 
-        Array sort2 = new Array(originArray);
-        sort2.mergeSort(originArray,0,7,mergeWay2);
-        sort2.showArray();
-        System.out.println();
+//        Array sort2 = new Array(originArray);
+//        sort2.mergeSort(originArray,0,7,mergeWay2);
+//        sort2.showArray();
+//        System.out.println();
 
         Array sort3 = new Array(originArray);
         sort3.mergeSortChange(originArray,0,7);
